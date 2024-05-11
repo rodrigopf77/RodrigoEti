@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title id="servicos">Rodrigo Pacheco Fernandes</title>
+    <link rel="icon" href="**/imagens/icone.png">
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" th:href="@{/static/bootstrap/css/estilo.css}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+	<nav class="nav justify-content-end">
+		<a class="nav-link" th:href="@{/empresa/listar}"><strong>HOME</strong></a>
+		<a class="nav-link" th:href="@{/empresa/listar}"><strong>FORMAÇÃO</strong></a>
+		<a class="nav-link" th:href="@{/empresa/listar}"><strong>CURSOS</strong></a>
+		<a class="nav-link" th:href="@{/empresa/listar}"><strong>EXPERIÊNCIAS - PROFISSIONAIS</strong></a>
+	</nav>
+
+	<div class="card" style="padding: 20px">
+		<div style='text-align: center' class="card-header">
+			<strong>CADASTRAR EMPRESA</strong>
+		</div>
+
+		<div class="card-body">
+			<div class="md-3"></div>
+			<div class="md-6">
+			<form class="form-horizontal" th:object="${empresa}" th:action="@{/empresa/save}" method="POST"
+				style="margin: 10px">
+				<div  class="form-group row">
+				<div class="col-md-4">
+						<label></label>
+							
+					</div>
+					<div class="col-md-4">
+						<label>Código</label> <input type="text" class="form-control input-sm" id="id" th:field="*{id}"
+							readonly="readonly">
+							
+					</div>
+				</div>
+				<div  class="form-group row">
+				<div class="col-md-4">
+						<label></label>
+							
+					</div>
+					<div class="col-md-4">
+						<label>Razão Social</label>
+						<input type="text" class="form-control input-sm" id="nome" th:field="*{nome}"
+								placeholder="Razão Social">
+							
+					</div>
+				</div>
+				<div  class="form-group row">
+				<div class="col-md-4">
+						<label></label>
+							
+					</div>
+					<div class="col-md-4">
+						<label>Nome Fantasia</label>
+							<input type="text" class="form-control input-sm" id="nomeFantasia"
+								th:field="*{nomeFantasia}" placeholder="Nome Fantasia">
+							
+					</div>
+				</div>
+				<div  class="form-group row">
+				<div class="col-md-4">
+						<label></label>
+							
+					</div>
+					<div class="col-md-4">
+						<label>Segmento</label>
+							<input type="text" class="form-control input-sm" id="segmento" th:field="*{segmento}"
+								placeholder="Digite o segmento">
+							
+					</div>
+				</div>
+				<div  class="form-group row">
+				<div class="col-md-4">
+						<label></label>
+							
+					</div>
+					<div class="col-md-4">
+							<label>Estado</label>
+							<input type="text" class="form-control input-sm" id="estado" th:field="*{estado}"
+								placeholder="Digite o estado">
+							<br>
+							<div style='text-align: right'>
+							<button style='text-align: center' type="submit" class="btn btn-sm btn-primary">Salvar</button>
+							|
+							<a class="btn btn-sm btn-warning" th:href="@{/empresa/listar}">Voltar</a>
+							</div>
+					</div>
+				</div>
+			
+			</form>
+		</div>
+		<div class="md-3"></div>
+		<div class="card-footer">
+			<div style='text-align: center'> &copy Todos os Direitos Reservados | Premium Technology</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
