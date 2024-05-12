@@ -19,7 +19,7 @@ public class Empresa {
 	private String nomeFantasia;
 	private String segmento;
 	private String estado;
-	
+	//Teste
 	@OneToMany(targetEntity = Produto.class, mappedBy = "instituicao", fetch = FetchType.LAZY)
 	private List<Produto> curso;
 
