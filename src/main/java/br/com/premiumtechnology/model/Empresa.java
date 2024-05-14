@@ -26,6 +26,9 @@ public class Empresa {
 	@OneToMany(targetEntity = ExperienciaProfissional.class, mappedBy = "empresa", fetch = FetchType.LAZY)
 	private List<ExperienciaProfissional> experiencias;
 	
+	@OneToMany(targetEntity = ExperienciaProfissional.class, mappedBy = "empresa", fetch = FetchType.LAZY)
+	private List<ExperienciaProfissional> formacao;
+	
 	public Long getId() {
 		return id;
 	}

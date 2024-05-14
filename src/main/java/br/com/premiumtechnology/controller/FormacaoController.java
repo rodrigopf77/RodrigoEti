@@ -39,7 +39,7 @@ public class FormacaoController {
 		
 		@RequestMapping(value = "save", method = RequestMethod.POST)
 		public String salvar(Formacao formacao) {
-			System.out.println("Cheguei no SAVE: " + formacao.getFormacao());
+			//System.out.println("Cheguei no SAVE: " + formacao.getFormacao());
 			fService.save(formacao);
 			return "redirect:/formacao/listar";
 		}

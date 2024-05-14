@@ -51,14 +51,4 @@ public class Formacao {
 		this.empresa = empresa;
 	}
 
-	/*public LocalDate getAno() {
-		return ano;
-	}
-
-	public void setAno(LocalDate ano) {
-		this.ano = ano;
-	}*/
-	
-	
-
 }
