@@ -59,16 +59,15 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr th:each="formacao : ${listaFormacao}">
-							<td style='text-align: center' th:text="${formacao.id}">ID
-								HOSPEDE</td>
-							<td th:text="${formacao.formacao}">FORMAÇÃO</td>
-							<td style='text-align: center' th:text="${formacao.empresa.nomeFantasia}">INSTITUIÇÃO</td>
+						<tr th:each="form : ${listaFormacao}">
+							<td style='text-align: center' th:text="${form.id}">ID</td>
+							<td th:text="${form.formaco}">FORMAÇÃO</td>
+							<td style='text-align: center' th:text="${form.empresa.nomeFantasia}">INSTITUIÇÃO</td>
 							
 							<td style='text-align: center'><a class="btn btn-sm btn-info"
-									th:href="@{/formacao/editar/{id} (id=${formacao.id})}">Editar</a> <a
-									class="btn btn-sm btn-danger" th:href="@{/formacao/delete/{id} (id=${formacao.id})}"
-									th:data-confirm-delete="|Deseja realmente excluir ${formacao.nome}|"
+									th:href="@{/formacao/editar/{id} (id=${form.id})}">Editar</a> <a
+									class="btn btn-sm btn-danger" th:href="@{/formacao/delete/{id} (id=${form.id})}"
+									th:data-confirm-delete="|Deseja realmente excluir ${form.formaco}|"
 									onclick="if (!confirm(this.getAttribute('data-confirm-delete'))) return false">Apagar</a>
 							</td>
 						</tr>

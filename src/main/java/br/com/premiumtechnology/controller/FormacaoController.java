@@ -28,7 +28,7 @@ public class FormacaoController {
 		@RequestMapping("adicionar")
 		public ModelAndView addFormacao(Formacao formacao) {
 			ModelAndView mv = new ModelAndView();
-			mv.setViewName("cadastrarformacao"); 
+			mv.setViewName("cadastroformacao"); 
 			mv.addObject("formacao", formacao);
 
 			List<Empresa> empresas = eService.todos();
@@ -39,14 +39,23 @@ public class FormacaoController {
 		
 		@RequestMapping(value = "save", method = RequestMethod.POST)
 		public String salvar(Formacao formacao) {
-			//System.out.println("Cheguei no SAVE: " + formacao.getFormacao());
-			fService.save(formacao);
+			try {
+				System.out.println("Cheguei no SAVE: " + formacao.getFormaco());
+				fService.save(formacao);
+				return "redirect:/formacao/listar";
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
 			return "redirect:/formacao/listar";
 		}
 		
 		@RequestMapping("listar")
 		public String home(Model model) {
 			List<Formacao> listaFormacao = fService.todos();
+			for (Formacao formacao : listaFormacao) {
+				System.out.println("Cheguei no SAVE: " + formacao.getEmpresa().getNomeFantasia());
+				
+			}
 			model.addAttribute("listaFormacao", listaFormacao);
 			
 			return "formacao";

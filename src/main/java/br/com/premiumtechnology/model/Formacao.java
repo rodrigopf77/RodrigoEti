@@ -18,15 +18,15 @@ public class Formacao {
 	@Column(name = "id_formacao")
 	private long id;
 	
-	@Column(name= "formacao")
-	private String formacao;
+	@Column(name= "formaco")
+	private String formaco;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="experiencia_empresa_id", referencedColumnName = "id")
 	private Empresa empresa;
-	
-	/*private LocalDate ano;*/
 
+	/*private LocalDate ano;*/
+	
 	public long getId() {
 		return id;
 	}
@@ -35,12 +35,12 @@ public class Formacao {
 		this.id = id;
 	}
 
-	public String getFormacao() {
-		return formacao;
+	public String getFormaco() {
+		return formaco;
 	}
 
-	public void setFormacao(String formacao) {
-		this.formacao = formacao;
+	public void setFormaco(String formaco) {
+		this.formaco = formaco;
 	}
 
 	public Empresa getEmpresa() {
@@ -50,5 +50,5 @@ public class Formacao {
 	public void setEmpresa(Empresa empresa) {
 		this.empresa = empresa;
 	}
-
+	
 }

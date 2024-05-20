@@ -1,4 +1,4 @@
-package br.com.premiumtechnology.model;
+ package br.com.premiumtechnology.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

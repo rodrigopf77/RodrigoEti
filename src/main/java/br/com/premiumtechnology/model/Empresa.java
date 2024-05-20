@@ -62,7 +62,7 @@ public class Empresa {
 	}
 	
 	public String getNomeFantasia() {
-		return nomeFantasia;
+		return this.nomeFantasia;
 	}
 
 	public void setNomeFantasia(String nomeFantasia) {

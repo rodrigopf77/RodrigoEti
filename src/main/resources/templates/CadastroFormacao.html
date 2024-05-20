@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
 <head>
-<meta charset="utf-8">
+	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,20 +20,24 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
+
 	<nav class="nav justify-content-end">
 		<a class="nav-link" th:href="@{/empresa/listar}"><strong>HOME</strong></a>
-		<a class="nav-link" th:href="@{/empresa/listar}"><strong>FORMAÇÃO</strong></a>
-		<a class="nav-link" th:href="@{/empresa/listar}"><strong>CURSOS</strong></a>
-		<a class="nav-link" th:href="@{/empresa/listar}"><strong>EXPERIÊNCIAS - PROFISSIONAIS</strong></a>
+		<a class="nav-link" th:href="@{/formacao/listar}"><strong>FORMAÇÃO</strong></a>
+		<a class="nav-link" th:href="@{/cursos/listar}"><strong>CURSOS</strong></a>
+		<a class="nav-link" th:href="@{/experiencias/listar}"><strong>EXPERIÊNCIAS - PROFISSIONAIS</strong></a>
 	</nav>
 
 	<div class="card" style="padding: 20px">
 		<div style='text-align: center' class="card-header">
-			<strong>CADASTRAR FORMAÇAO</strong>
+			<strong>CADASTRAR FORMAÇÃO</strong>
 		</div>
 
 		<div class="card-body">
+			<div class="md-3"></div>
+			<div class="md-6">
 			<form class="form-horizontal" th:object="${formacao}" th:action="@{/formacao/save}" method="POST"
 				style="margin: 10px">
 				<div  class="form-group row">
@@ -40,7 +46,8 @@
 							
 					</div>
 					<div class="col-md-4">
-						<label>Código</label> <input type="text" class="form-control input-sm" id="id" th:field="*{id}"	readonly="readonly">
+						<label>Código</label> <input type="text" class="form-control input-sm" id="id" th:field="*{id}"
+							readonly="readonly">
 							
 					</div>
 				</div>
@@ -50,7 +57,8 @@
 							
 					</div>
 					<div class="col-md-4">
-						<label>Formação</label> <input type="text" class="form-control input-sm" id="formacao" th:field="*{formacao}" placeholder="Nome Curso">
+						<label>Formação</label> 
+						<input type="text" class="form-control input-sm" id="formaco" th:field="*{formaco}" placeholder="Nome Curso">
 							
 					</div>
 				</div>
@@ -60,11 +68,10 @@
 							
 					</div>
 					<div class="col-md-4">
-						<label>Instituição</label> <select th:field="*{empresa}"
-							class="form-control input-sm">
+						<label>Instituição</label> 
+						<select th:field="*{empresa}" class="form-control input-sm">
 							<option value="">-- Escolha --</option>
-							<option th:each="form : ${lista_empresa}" th:value="${form.id}"
-								th:utext="${form.nomeFantasia}" />
+							<option th:each="form : ${lista_empresa}" th:value="${form.id}"	th:utext="${form.nomeFantasia}" />
 						</select> <br>
 						<button style='text-align: center' type="submit"
 							class="btn btn-success">Salvar</button>
@@ -72,14 +79,15 @@
 							
 					</div>
 				</div>
+			
 			</form>
-		
 		</div>
+		<div class="md-3"></div>
 		<div class="card-footer">
-			<div style='text-align: center'>&copy Todos os Direitos
-				Reservados | Premium Technology</div>
+			<div style='text-align: center'> &copy Todos os Direitos Reservados | Premium Technology</div>
 		</div>
 	</div>
 
 </body>
+
 </html>
