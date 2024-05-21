@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import br.com.premiumtechnology.model.Formacao;
 import br.com.premiumtechnology.model.LinguagensFramworks;
 import br.com.premiumtechnology.service.LinguagemService;
 
@@ -34,6 +35,10 @@ public class LinguagemController {
 	@RequestMapping("listar")
 	public String home(Model model) {
 		List<LinguagensFramworks> listaLinguagens = lService.todos();
+		for (LinguagensFramworks linguagem : listaLinguagens) {
+			System.out.println("Cheguei no SAVE: " + linguagem.getNomeLinguagem());
+			
+		}
 		model.addAttribute("listaLinguagem", listaLinguagens);
 		return "linguagens";
 	}

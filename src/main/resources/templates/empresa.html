@@ -21,13 +21,17 @@
   </head>
   <body>
   
-	  <nav class="nav justify-content-end">
-		  <a class="nav-link" th:href="@{/empresa/listar}"><strong>HOME</strong></a>
-		  <a class="nav-link" th:href="@{/empresa/listar}"><strong>FORMAÇÃO</strong></a>
-		  <a class="nav-link" th:href="@{/curso/listar}"><strong>CURSOS</strong></a>
-		  <a class="nav-link" th:href="@{/linguagem/listar}"><strong>LINGUAGENS / FRAMEWORKS</strong></a>
-		  <a class="nav-link" th:href="@{/empresa/listar}"><strong>EXPERIÊNCIAS	- PROFISSIONAIS</strong></a>
-	 </nav>
+  <nav class="navbar navbar fixed-top bg-body-tertiary" style=" class="navbar bg-primary" data-bs-theme="dark"">
+  <!-- Navbar content -->
+  <nav class="nav justify-content-end">
+		<a class="nav-link" th:href="@{/index/listar}"><strong>HOME</strong></a>
+		<a class="nav-link" th:href="@{/empresa/listar}"><strong>EMPRESAS</strong></a>
+		<a class="nav-link" th:href="@{/formacao/listar}"><strong>FORMAÇÃO</strong></a>
+		<a class="nav-link" th:href="@{/curso/listar}"><strong>CURSOS</strong></a>
+		<a class="nav-link" th:href="@{/experiencia/listar}"><strong>EXPERIÊNCIAS - PROFISSIONAIS</strong></a>
+	</nav>
+</nav>
+	  
 	  </br></br></br>
 	  <div style="margin: 30px">
 	  
@@ -72,11 +76,10 @@
 	  </div>
 	  </div>  
 	  </br></br></br>
-		<div class="card-footer">
-			<div style='text-align: center' color="blue">
-				<h5>&copy Todos os Direitos Reservados | Premium Technology</h5>
-			</div>
-		</div>
+		
+	</div>
+	<div style='text-align: center' color="blue">
+		<h5>&copy Todos os Direitos Reservados | Premium Technology</h5>
 	</div>
     
   </body>
