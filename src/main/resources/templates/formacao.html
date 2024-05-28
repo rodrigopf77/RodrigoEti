@@ -66,7 +66,7 @@
 							<td style='text-align: center' th:text="${form.empresa.nomeFantasia}">INSTITUIÇÃO</td>
 							
 							<td style='text-align: center'><a class="btn btn-sm btn-info"
-									th:href="@{/formacao/editar/{id} (id=${form.id})}">Editar</a> <a
+									th:href="@{/formacao/editar/{id} (id=${form.id})}">Editar</a> | <a
 									class="btn btn-sm btn-danger" th:href="@{/formacao/delete/{id} (id=${form.id})}"
 									th:data-confirm-delete="|Deseja realmente excluir ${form.formaco}|"
 									onclick="if (!confirm(this.getAttribute('data-confirm-delete'))) return false">Apagar</a>
@@ -77,6 +77,7 @@
 				</table>
 			</div>
 		</div>
+	</div>
 </body>
 
 </html>

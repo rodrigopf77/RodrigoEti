@@ -63,7 +63,7 @@
 								th:text="${curso.instituicao.nome}">INSTITUIÇÃO</td>
 							<td style='text-align: center'><a
 								class="btn btn-sm btn-info"
-								th:href="@{/curso/editar/{id} (id=${curso.id})}">Editar</a> <a
+								th:href="@{/curso/editar/{id} (id=${curso.id})}">Editar</a> | <a
 								class="btn btn-sm btn-danger"
 								th:href="@{/curso/delete/{id} (id=${curso.id})}"
 								th:data-confirm-delete="|Deseja realmente excluir ${curso.nome}|"
